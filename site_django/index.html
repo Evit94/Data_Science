@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Vulnerabilites ANSSI</title>
+  <style>
+    body { font-family: sans-serif; margin: 30px; }
+    h1 { color: #2c3e50; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+    th { background: #2c3e50; color: white; }
+    tr:nth-child(even) { background: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <h1>Top 50 des vulnerabilites par priorite</h1>
+  <table>
+    <tr>
+      <th>Bulletin</th><th>CVE</th><th>Produit</th>
+      <th>CVSS</th><th>Gravite</th><th>EPSS</th><th>Priorite</th>
+    </tr>
+    {% for ligne in lignes %}
+    <tr>
+      <td>{{ ligne.bulletin }}</td>
+      <td>{{ ligne.CVE }}</td>
+      <td>{{ ligne.Produit }}</td>
+      <td>{{ ligne.cvss }}</td>
+      <td>{{ ligne.gravite }}</td>
+      <td>{{ ligne.epss }}</td>
+      <td>{{ ligne.Priorite }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

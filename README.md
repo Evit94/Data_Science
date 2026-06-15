@@ -67,9 +67,26 @@ Ouvrir `analyse_anssi.ipynb` (VS Code ou Jupyter) et exécuter les cellules.
 ## 5. Colonnes du CSV
 
 `ID ANSSI`, `Titre ANSSI`, `Type`, `Date`, `CVE`, `Score CVSS`, `Base Severity`,
-`CWE`, `Score EPSS`, `Lien`, `Description`, `Editeur`, `Produit`, `Versions affectees`.
+`CWE`, `Score EPSS`, `Niveau EPSS`, `Priorite`, `Lien`, `Description`, `Editeur`,
+`Produit`, `Versions affectees`.
+
+> `Priorite` = `Score CVSS` × `Score EPSS` : une faille n'est urgente que si elle est
+> à la fois grave **et** réellement exploitée.
 
 ## 6. Usage responsable
 
 Le mode **local** est privilégié pour éviter de surcharger les serveurs ; le mode
-**api** applique un **délai de 2 s** entre les requêtes.
+**api** applique un **délai de 0.5 s** entre les requêtes.
+
+## 7. Pour aller plus loin : mini site Django (optionnel)
+
+Le dossier `site_django/` contient une petite interface web (tout tient dans un seul
+fichier `app.py` + un template `index.html`) qui lit le CSV et affiche les **50
+vulnérabilités les plus prioritaires** dans un tableau.
+
+```bash
+pip install django
+python site_django/app.py     # puis ouvrir http://127.0.0.1:8000
+```
+
+Cela montre qu'on peut transformer l'analyse en véritable outil consultable.
