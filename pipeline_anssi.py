@@ -24,7 +24,7 @@ def lire_json(chemin_local, url):
         with open(chemin_local, encoding="utf-8") as f:
             return json.load(f)
     else:
-        #time.sleep(0.5)
+        time.sleep(0.5)
         reponse = requests.get(url, headers=HEADERS, verify=False)
         return reponse.json() if reponse.status_code == 200 else None
 
