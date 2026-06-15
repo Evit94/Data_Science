@@ -36,7 +36,7 @@ LIMITE = 500       # nombre max de bulletins de chaque type (mettre ~5 en mode "
 ```
 
 - **`"local"`** : lit les fichiers de `data/`, aucune requête réseau.
-- **`"api"`** : interroge les serveurs, avec un **délai de 2 s** entre chaque requête
+- **`"api"`** : interroge les serveurs, avec un **délai de 0.5 s** entre chaque requête
   (`DELAI_API`) pour ne pas les surcharger. À limiter avec `LIMITE`.
 
 > Une seule fonction, `lire_json()`, gère la différence entre les deux modes : elle
