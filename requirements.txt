@@ -1,0 +1,15 @@
+# Bibliotheques necessaires au projet
+# Installation : pip install -r requirements.txt
+
+# Pipeline (pipeline_anssi.py)
+requests
+feedparser
+pandas
+
+# Notebook d'analyse (analyse_anssi.ipynb)
+matplotlib
+scikit-learn
+
+# Pour ouvrir / executer le notebook
+notebook
+ipykernel
