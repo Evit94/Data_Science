@@ -13,3 +13,6 @@ scikit-learn
 # Pour ouvrir / executer le notebook
 notebook
 ipykernel
+
+# Site Django
+django
