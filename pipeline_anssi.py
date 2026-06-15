@@ -11,7 +11,7 @@ urllib3.disable_warnings()
 
 # "local" = lire data/  |  "api" = requetes web
 SOURCE = "api"
-LIMITE = 9999
+LIMITE = 9999 # S'utilise en local mais pas en api
 HEADERS = {"User-Agent": "Projet-EFREI"}
 DOSSIERS = {"Alerte": "alertes", "Avis": "Avis"}
 
