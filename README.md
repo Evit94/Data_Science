@@ -1,10 +1,12 @@
 # Analyse des avis et alertes ANSSI + enrichissement des CVE
 
-Ce projet collecte les **bulletins de sécurité de l'ANSSI** (avis et alertes), en
-extrait les **CVE**, les **enrichit** (scores CVSS, types CWE, scores EPSS),
-consolide le tout dans un **fichier CSV**, puis réalise des **visualisations** et
-des modèles de **Machine Learning**. Il **génère** enfin une alerte email pour les
-vulnérabilités critiques.
+Pipeline Python de cybersécurité offensive/défensive : collecte des **bulletins
+ANSSI**, extraction et enrichissement des **CVE** (CVSS, CWE, EPSS), puis
+**Machine Learning** (KMeans, RandomForest) pour prioriser les vulnérabilités
+réellement critiques. Une mini-interface **Django** expose le top 50 des failles
+à traiter en priorité, et une alerte email est générée automatiquement.
+
+![Aperçu du tableau de bord Django](docs/dashboard-preview.png)
 
 ## 1. Fichiers du projet
 
@@ -89,4 +91,5 @@ pip install django
 python site_django/app.py     # puis ouvrir http://127.0.0.1:8000
 ```
 
-Cela montre qu'on peut transformer l'analyse en véritable outil consultable.
+Cela montre qu'on peut transformer l'analyse en véritable outil consultable
+(capture d'écran ci-dessus, données d'exemple).
